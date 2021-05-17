@@ -1,0 +1,13 @@
+All changes must be done on a new branch. 
+Then a pull request can be made for it to be merged with the main branch.
+
+No one can verify their own pull requests.
+
+Our branch naming convention will be as follows:
+<branch-type>_<task-name>_<author-name>
+
+Branch Types:
+1. Bugs (bug)
+2. Feature (feat)
+3. Experimental (exp)
+
