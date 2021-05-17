@@ -11,3 +11,74 @@ Branch Types:
 2. Feature (feat)
 3. Experimental (exp)
 
+
+Guide to getting started:
+
+What you need to download and set up::
+Git - https://git-scm.com/downloads
+Nodejs - https://nodejs.org/en/
+VS Code - https://code.visualstudio.com/download
+
+
+To Do::
+Become a part of the organization:
+    - Make a github account and send it to maximus to be added to the organization.
+        
+Set up Git:
+    - Open Git Bash and configure your user name and email using the following:
+        git config --global user.name "FIRST_NAME LAST_NAME"
+        git config --global user.email "MY_NAME@example.com"
+
+    - Set VSCode as default git editor:
+        git config --global core.editor "code --wait"
+
+
+Clone github repository:
+    -Using git bash navigate to the folder on your computer you want to store the project code in.
+    -Enter the command : "git clone https://github.com/SummerProjectt/delivery-interface.git"
+
+Open Project Folder:
+    -When it is finished cloning you can move into the project folder using : "cd delivery-interface"
+    -Open the code in VScode using the command : "code ."
+    -You can also open the project folder by opening VScode and selecting open folder, then navigate to the project folder.
+
+Install node_modules:
+    -To install node_modules you can either use the Node.js command prompt to navigate to the project folder or open a new terminal in VScode while in the project folder.
+    -Then you can enter the command: "npm install" or "npm i"
+    -It takes a short while to install the node_modules
+
+Run development server:
+    -After all the above steps are completed the project should be ready for you to make changes.
+    -The way to track these changes is with the development server.
+    -In order to start it you can either use the Node.js command prompt to navigate to the project folder or open a new terminal in VScode while in the project folder.
+    -Then you enter the command : "npm run dev"
+    -You should see a message saying: "ready - started server on 0.0.0.0:3000, url: http://localhost:3000"
+    -You can open your browser and enter : "http://localhost:3000"
+    -The current state of the project should appear load. 
+
+Stop development server:
+    -In the terminal where the server was started you can use the "ctrl-c" command to stop the development server.
+
+
+
+Basic git commands:
+    -git clone - adds a new repository on branch master.
+    -git add - adds a new file that can later be committed(the term commited means save the newest version of a file)
+    -git status - updates the user on the status of a particular file
+    -git commit - this creates a new version of our file on the branch master (git commit -m: the option m adds a message so you know what changes you've made)
+    -git commit -am adds and leaves a message, essentially combining the command git add to git commit -m
+    -git push - pushes/adds the changes to the content you made to the server, the serve in this case is github
+    -git pull - pulls new versions of code from the server to your local device
+    -git log - keeps track of all the commits we've made to the code
+    -git reset - if you made a change you didnt mean, and want to go back to previous commit. reverts from current to previous
+    -git reset --hard "commit hash": will hard reset everything.
+    -git reset --hard origin/master: origin/master is the version of your repository that is on github
+
+
+    -git branch - lets you know what branch you are on, and what branches exist in your repository.
+    -git branch -d - deletes a branch
+    -git branch -a - lists all branches (local and remote)
+    -git branch [brach name] - creates a new branch
+    -git checkout -b style - this creates a new branch where "style" is the name of the new branch
+    -git checkout [branchname] - this allows the user to change between branches.
+    -git merge - will merge in changes made in other branches in 1 branch
