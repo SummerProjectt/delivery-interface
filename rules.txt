@@ -82,3 +82,31 @@ Basic git commands:
     -git checkout -b style - this creates a new branch where "style" is the name of the new branch
     -git checkout [branchname] - this allows the user to change between branches.
     -git merge - will merge in changes made in other branches in 1 branch
+
+IMPORTANT:
+From time to time your changes may conflict with what is currently on the main branch. 
+In cases like that it is often best to pull the latest from main first with a rebase.
+    
+    -git pull origin main --rebase
+
+This command will pull the commits that have already been merged and attempt to apply your changes on top of those commits. 
+There may be some conflicts, so you can resolve them by staging them (git add) after being fixed and continue the rebase.
+
+git add . && git rebase --continue
+
+These commands will stage all the files changed and continue the rebase.
+
+
+Git Cheat Sheets:
+https://education.github.com/git-cheat-sheet-education.pdf
+https://www.git-tower.com/blog/git-cheat-sheet/
+https://www.freecodecamp.org/news/git-cheat-sheet/
+
+
+Useful VScode extensions:
+Auto Rename Tag
+Prettier - Code formatter
+Simple React Snippets
+Tabnine Autocomplete AI
+Visual Studio IntelliCode
+Kite AutoComplete AI Code
