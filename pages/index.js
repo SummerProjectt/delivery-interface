@@ -17,7 +17,7 @@ export default function Home() {
 
 			<main className={styles.main}>
 				<h1 className={styles.title}>
-					Welcome to <a href="https://monkeytype.com/login">Youtube</a>
+					Welcome to <a href="https://monkeytype.com/login">Facebook</a>
 				</h1>
 
 				<p className={styles.description}>
