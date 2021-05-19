@@ -11,21 +11,10 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-<<<<<<< HEAD
-			<main className={styles.main}>
-				<h1 className={styles.title}>
-					Welcome to{" "}
-					<a href="https://givebackbarbados.com/single-category/esvt/">
-						GiveBack
-					</a>
-					{/* Welcome to <a href="https://nextjs.org/">NextJS</a> */}
-				</h1>
-=======
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://monkeytype.com/login">Youtube</a>
         </h1>
->>>>>>> ba7bc52 (Changed YouTube to MonkeyType)
 
 				<p className={styles.description}>
 					Get started by eaating{" "}
