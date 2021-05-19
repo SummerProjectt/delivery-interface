@@ -22,7 +22,7 @@ VS Code - https://code.visualstudio.com/download
 
 To Do::
 Become a part of the organization:
-    - Make a github account and send it to maximus to be added to the organization.
+    - Make a github account and send it to Maximus or Mateo to be added to the organization.
         
 Set up Git:
     - Open Git Bash and configure your user name and email using the following:
