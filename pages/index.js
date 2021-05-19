@@ -1,8 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "@styles/Home.module.css";
-
+import styles from "@styles/Temp.module.css";
+import Card from "@components/Card";
 export default function Home() {
+	let array = ["My name is mateo", "My name is Jeff", "Pizza is cool"];
+	function doSomething() {
+		alert("Hello");
+	}
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -11,10 +15,10 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://monkeytype.com/login">Youtube</a>
-        </h1>
+			<main className={styles.main}>
+				<h1 className={styles.title}>
+					Welcome to <a href="https://monkeytype.com/login">Youtube</a>
+				</h1>
 
 				<p className={styles.description}>
 					Get started by eaating{" "}
