@@ -1,8 +1,9 @@
+import styles from "@styles/Card.module.css";
+
 export default function Card({ first }) {
 	return (
-		<div>
-			<p>{first}</p>
-			<p>No one likes the government either</p>
+		<div className={styles.card}>
+			<p>{first}</p>{" "}
 		</div>
 	);
 }
