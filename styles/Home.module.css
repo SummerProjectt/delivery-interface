@@ -2,3 +2,9 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 }
+
+.fetchButton {
+	width: 200px;
+	padding: 5px;
+	height: fit-content;
+}

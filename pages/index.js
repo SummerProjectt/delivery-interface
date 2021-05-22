@@ -1,9 +1,16 @@
 import Head from "next/head";
 import styles from "@styles/Home.module.css";
 import Card from "@components/Card";
+import { useState, useEffect } from "react";
 export default function Home() {
 	let array = ["My name is mateo", "My name is Jeff", "Pizza is cool"];
-
+	const [data, setData] = useState(null);
+	async function getData() {
+		const response = await fetch("/api/hello");
+		const obj = await response.json();
+		setData(obj);
+	}
+	// useEffect(() => getData());
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -14,8 +21,17 @@ export default function Home() {
 
 			{/* Example of mapping arrays and passing props to components */}
 			{array.map((arr) => (
-				<Card first={arr}></Card>
+				<Card key={arr} first={arr}></Card>
 			))}
+			<button className={styles.fetchButton} onClick={getData}>
+				Click to fetch from /api/hello.js
+			</button>
+			{data == null ? null : (
+				<div>
+					<p>Name: {data.name}</p>
+					<p>Age: {data.age}</p>
+				</div>
+			)}
 		</div>
 	);
 }
