@@ -5,10 +5,18 @@ import { useState, useEffect } from "react";
 export default function Home() {
 	let array = ["My name is mateo", "My name is Jeff", "Pizza is cool"];
 	const [data, setData] = useState(null);
+	const [db, setDB] = useState(null);
 	async function getData() {
 		const response = await fetch("/api/hello");
 		const obj = await response.json();
 		setData(obj);
+	}
+
+	async function getBase() {
+		const response = await fetch("/api/sql");
+		const obj = await response.json();
+		setDB(obj);
+		console.log(db);
 	}
 	// useEffect(() => getData());
 	return (
@@ -32,6 +40,19 @@ export default function Home() {
 					<p>Age: {data.age}</p>
 				</div>
 			)}
+
+			<button className={styles.fetchButton} onClick={getBase}>
+				Click to fetch from /api/sql.js
+			</button>
+
+			{db == null
+				? null
+				: db.map((d) => (
+						<div>
+							<p>ID: {d.id}</p>
+							<p>Name: {d.name}</p>
+						</div>
+				  ))}
 		</div>
 	);
 }
