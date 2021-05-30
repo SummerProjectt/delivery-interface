@@ -4,7 +4,7 @@ var con = mysql.createConnection({
 	host: "localhost",
 	user: "root",
 	password: "Vinbarjam_1",
-	database: "record_company",
+	database: "menu",
 });
 
 var exp;
@@ -16,7 +16,7 @@ con.connect(function (err) {
 	// 	if (err) throw err; //second
 	// 	console.log("Result: " + result);
 	// });
-	con.query("select * from bands", function (err, result, rows, fields) {
+	con.query("select * from items", function (err, result, rows, fields) {
 		if (err) throw err; //second
 		// console.log(JSON.stringify(result));
 		exp = JSON.stringify(result);

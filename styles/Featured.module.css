@@ -1,0 +1,24 @@
+.container {
+	display: block;
+	margin-top: 20px;
+	height: 200px;
+}
+
+.img {
+	height: 100%;
+	background-image: url("https://static01.nyt.com/images/2021/02/17/dining/17tootired-sesame-noodles/merlin_126109679_c4abf7f2-e900-4552-a09a-a5421d4cbe8f-jumbo.jpg?quality=90&auto=webp");
+	background-size: cover;
+	display: grid;
+	place-content: center;
+	grid-template-columns: 1fr;
+}
+
+.text {
+	text-align: center;
+	display: block;
+	width: inherit;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 40px;
+	background-color: rgb(255, 255, 255, 0.5);
+}

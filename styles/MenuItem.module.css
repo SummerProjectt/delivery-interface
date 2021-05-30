@@ -1,0 +1,15 @@
+.container {
+	display: grid;
+	grid-template-columns: 2fr 4fr;
+	grid-template-rows: 100px;
+}
+.img {
+	height: 100%;
+	background-image: url("https://i.insider.com/5a6cc5d27101ad7a0830cb94?width=800&format=jpeg&auto=webp");
+	background-size: cover;
+	background-position: center;
+}
+
+.text {
+	padding-left: 40px;
+}

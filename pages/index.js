@@ -1,24 +1,10 @@
 import Head from "next/head";
 import styles from "@styles/Home.module.css";
-import Card from "@components/Card";
-import { useState, useEffect } from "react";
+import Navbar from "@src/Navbar";
+import SearchBar from "@src/SearchBar";
+import Featured from "@src/Featured";
+import Menu from "@src/Menu";
 export default function Home() {
-	let array = ["My name is mateo", "My name is Jeff", "Pizza is cool"];
-	const [data, setData] = useState(null);
-	const [db, setDB] = useState(null);
-	async function getData() {
-		const response = await fetch("/api/hello");
-		const obj = await response.json();
-		setData(obj);
-	}
-
-	async function getBase() {
-		const response = await fetch("/api/sql");
-		const obj = await response.json();
-		setDB(obj);
-		console.log(db);
-	}
-	// useEffect(() => getData());
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -27,32 +13,10 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			{/* Example of mapping arrays and passing props to components */}
-			{array.map((arr) => (
-				<Card key={arr} first={arr}></Card>
-			))}
-			<button className={styles.fetchButton} onClick={getData}>
-				Click to fetch from /api/hello.js
-			</button>
-			{data == null ? null : (
-				<div>
-					<p>Name: {data.name}</p>
-					<p>Age: {data.age}</p>
-				</div>
-			)}
-
-			<button className={styles.fetchButton} onClick={getBase}>
-				Click to fetch from /api/sql.js
-			</button>
-
-			{db == null
-				? null
-				: db.map((d) => (
-						<div>
-							<p>ID: {d.id}</p>
-							<p>Name: {d.name}</p>
-						</div>
-				  ))}
+			<Navbar></Navbar>
+			<SearchBar></SearchBar>
+			<Featured></Featured>
+			<Menu></Menu>
 		</div>
 	);
 }
