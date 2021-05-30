@@ -7,7 +7,7 @@ var con = mysql.createConnection({
 	database: "menu",
 });
 
-var exp;
+var exp = {};
 con.connect(function (err) {
 	if (err) throw err;
 	console.log("Connected!");
@@ -18,7 +18,7 @@ con.connect(function (err) {
 	// });
 	con.query("select * from items", function (err, result, rows, fields) {
 		if (err) throw err; //second
-		// console.log(JSON.stringify(result));
+		console.log(JSON.stringify(result));
 		exp = JSON.stringify(result);
 	});
 });
