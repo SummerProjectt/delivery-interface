@@ -18,7 +18,7 @@ con.connect(function (err) {
 	// });
 	con.query("select * from items;", function (err, result, rows, fields) {
 		if (err) throw err; //second
-		console.log(JSON.stringify(result));
+		// console.log(JSON.stringify(result));
 		exp = JSON.stringify(result);
 	});
 });

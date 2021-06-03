@@ -1,28 +1,40 @@
 import React, { useState, useEffect } from "react";
 import MenuItem from "@components/MenuItem";
 export default function Menu() {
-	const [menuitems, setMenuItems] = useState([
-		// { id: "1", name: "Jon" },
-		// { id: "2", name: "Jon" },
-	]);
+	const [menuitems, setMenuItems] = useState([]);
 	async function getBase() {
 		const response = await fetch("/api/sql");
-		setMenuItems(await response.json());
-		console.log(menuitems);
+		const obj = await response.json();
+		console.log(obj);
+		setMenuItems(obj);
 	}
 	useEffect(() => {
 		getBase();
+		if (menuitems == []) {
+			getBase();
+		}
 	}, []);
 
-	// function Call() {
-	// 	getBase();
-	// }
 	return (
 		<div>
-			{menuitems == null || menuitems.length < 1
+			{/* 			
+			{menuitems == null
 				? null
-				: menuitems.map((item) => <p key={item.id}>{item.name}</p>)}
-			<MenuItem></MenuItem>
+				: menuitems.map((item) => <p key={item.id}>{item.name}</p>)} */}
+
+			{/* { id, imgsrc, name, price } */}
+			{menuitems == null
+				? null
+				: menuitems.map((item) => (
+						<div key={item.id}>
+							<MenuItem
+								name={item.name}
+								imgsrc={item.image}
+								price={item.price}
+							></MenuItem>
+						</div>
+				  ))}
+
 			{/* <button onClick={Call}>Click</button> */}
 		</div>
 	);
