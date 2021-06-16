@@ -3,7 +3,7 @@ var mysql = require("mysql");
 var con = mysql.createConnection({
 	host: "localhost",
 	user: "root",
-	password: "Vinbarjam_1",
+	password: "password",
 	database: "menu",
 });
 
@@ -16,7 +16,7 @@ con.connect(function (err) {
 	// 	if (err) throw err; //second
 	// 	console.log("Result: " + result);
 	// });
-	con.query("select * from items;", function (err, result, rows, fields) {
+	con.query("select * from items", function (err, result, rows, fields) {
 		if (err) throw err; //second
 		// console.log(JSON.stringify(result));
 		exp = JSON.stringify(result);
